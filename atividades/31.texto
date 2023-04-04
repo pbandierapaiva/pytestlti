@@ -1,0 +1,17 @@
+Faça um programa em Python (versão 3) que receba 3 números, os coeficientes A, B e C de uma equação de segundo grau e retorne as raizes, em 0,1 ou 2 linhas dependendo número de raízes reais. <p>
+A x<sup>2</sup> + B x + C
+<p>
+<hr>
+Exemplo de execução:<br>
+Entrada
+<pre>
+1
+4
+4
+</pre>
+Saída
+<pre>
+2
+2
+</pre>
+<hr>
