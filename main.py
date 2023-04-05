@@ -52,8 +52,8 @@ async def create_upload_file(lis_outcome_service_url: str = Form(...),
             f.write(contents)
         f.close()
     
-        proc = subprocess.Popen(["python", nome], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
-        output_str, _ = proc.communicate(input="")
+    #    proc = subprocess.Popen(["python", nome], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+    #    output_str, _ = proc.communicate(input="")
 
         return {"filename": output_str, "lis_outcome_service_url":lis_outcome_service_url }
 
