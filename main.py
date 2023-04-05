@@ -50,7 +50,8 @@ async def create_upload_file(lis_outcome_service_url: str = Form(...),
         nome = "uploaded_files/" + str(uuid.uuid4())
         with open(nome, "wb") as f:
             f.write(contents)
-
+        f.close()
+    
         proc = subprocess.Popen(["python", nome], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
         output_str, _ = proc.communicate(input="")
 
