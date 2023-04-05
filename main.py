@@ -44,7 +44,8 @@ async def lti_launch(request: Request,
 #                     +"<h3>context_id: " + context_id+"</h3>")
 
 @app.post("/uploadfile/")
-async def create_upload_file(file: UploadFile = File(...)):
+async def create_upload_file(lis_outcome_service_url: str = Form(...),
+    file: UploadFile = File(...)):
         contents = await file.read()
         nome = "uploaded_files/" + str(uuid.uuid4())
         with open(nome, "wb") as f:
